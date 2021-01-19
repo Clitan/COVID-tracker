@@ -3,7 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
-import { HomeService } from '../services/home.service';
+import { CovidService } from '../services/covid.service';
 
 
 @Component({
@@ -20,7 +20,7 @@ export class StateCovidCasePage implements OnInit {
   dataSource: MatTableDataSource<any>;
 
   constructor(
-    private _service: HomeService,
+    private _service: CovidService,
     private _router: Router
   ) { }
 

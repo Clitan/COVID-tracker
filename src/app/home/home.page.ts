@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { HomeService } from '../services/home.service';
+import { CovidService } from '../services/covid.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +13,7 @@ export class HomePage implements OnInit {
   cardCountsData: any;
 
   constructor(
-    private _service: HomeService,
+    private _service: CovidService,
     private _router: Router
   ) { }
 
