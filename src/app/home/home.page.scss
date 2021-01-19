@@ -1,30 +1,39 @@
-.place-center{
+.place-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 
-.page-container{
+.page-container {
   width: 100%;
   min-height: 100vh;
   overflow: auto;
   background-color: #eee;
+  flex-direction: column;
   @extend .place-center;
- 
-  .card-container{
+
+  .header {
+    padding: 1.5rem 1.5rem 1.5rem 0;
+    display: flex;
+    align-items: center;
+    color: black;
+  }
+
+  .card-container {
     width: 70vw;
     @extend .place-center;
     justify-content: space-around;
 
     @media (max-width:800px) {
       flex-direction: column;
-      .card{
+
+      .card {
         margin-top: 1rem;
       }
     }
 
-    .card{
+    .card {
       width: 250px;
       height: 250px;
       border-radius: 12px;
@@ -34,16 +43,17 @@
       flex-direction: column;
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         transform: scale(1.05);
         transition: 0.5ms ease;
       }
-   
-      .icon{
+
+      .icon {
         font-size: 4rem;
+        margin-bottom: 0.3rem;
       }
-    } 
+    }
   }
-  
- 
+
+
 }

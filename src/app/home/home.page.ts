@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HomeService } from '../services/home.service';
 
 @Component({
@@ -9,10 +10,11 @@ import { HomeService } from '../services/home.service';
 export class HomePage implements OnInit {
 
 
-  cardCountsData:any;
+  cardCountsData: any;
 
   constructor(
-    private _service: HomeService
+    private _service: HomeService,
+    private _router: Router
   ) { }
 
 
@@ -20,10 +22,13 @@ export class HomePage implements OnInit {
     this.getCardsCount();
   }
 
+  goToStateInfo(): void {
+    this._router.navigate(['/state-covid-case'])
+  }
 
   getCardsCount(): void {
     this._service.getCardCounts().subscribe(res => {
-      this.cardCountsData =res;
+      this.cardCountsData = res;
     }, err => {
       console.log(err);
     })

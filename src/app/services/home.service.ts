@@ -15,4 +15,8 @@ export class HomeService {
     return this._http.get("https://api.covidindiatracker.com/total.json");
   }
 
+  getStateDetails(): Observable<any> {
+    return this._http.get(`https://api.covidindiatracker.com/state_data.json`);
+  }
+
 }

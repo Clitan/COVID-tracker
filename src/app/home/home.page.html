@@ -1,26 +1,25 @@
 <ion-content [fullscreen]="true">
   
   <section class="page-container">
-
+    <h1 class="header">Current COVID Status In India</h1>
     <section class="card-container" *ngIf="cardCountsData">
 
-  
-    <div class="card">
+    <div class="card" (click)="goToStateInfo()">
       <ion-icon class="icon" name="reader-outline"></ion-icon>
       <h3>{{cardCountsData.confirmed | number:'1.0'}}</h3>
-      <p>confirmed</p>
+      <p>Confirmed</p>
     </div>
 
-    <div class="card">
+    <div class="card" (click)="goToStateInfo()">
       <ion-icon class="icon" name="shield-checkmark-outline"></ion-icon>
       <h3>{{cardCountsData.recovered | number:'1.0'}}</h3>
       <p>Recovered</p>
     </div>
 
-    <div class="card">
+    <div class="card" (click)="goToStateInfo()">
       <ion-icon class="icon" name="skull-outline"></ion-icon>
       <h3>{{cardCountsData.deaths | number:'1.0'}}</h3>
-      <p>deaths</p>
+      <p>Deaths</p>
     </div>
   </section>
   </section>

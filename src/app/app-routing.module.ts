@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'state-covid-case',
+    loadChildren: () => import('./state-covid-case/state-covid-case.module').then( m => m.StateCovidCasePageModule)
+  },
+  {
+    path: 'district-covid-case/:id',
+    loadChildren: () => import('./district-covid-case/district-covid-case.module').then( m => m.DistrictCovidCasePageModule)
+  },
 ];
 
 @NgModule({
