@@ -1,27 +1,49 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.place-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.page-container{
+  width: 100%;
+  min-height: 100vh;
+  overflow: auto;
+  background-color: #eee;
+  @extend .place-center;
+ 
+  .card-container{
+    width: 70vw;
+    @extend .place-center;
+    justify-content: space-around;
 
-  color: #8c8c8c;
+    @media (max-width:800px) {
+      flex-direction: column;
+      .card{
+        margin-top: 1rem;
+      }
+    }
 
-  margin: 0;
-}
+    .card{
+      width: 250px;
+      height: 250px;
+      border-radius: 12px;
+      background-color: #123;
+      color: #fff;
+      @extend .place-center;
+      flex-direction: column;
+      cursor: pointer;
 
-#container a {
-  text-decoration: none;
+      &:hover{
+        transform: scale(1.05);
+        transition: 0.5ms ease;
+      }
+   
+      .icon{
+        font-size: 4rem;
+      }
+    } 
+  }
+  
+ 
 }
