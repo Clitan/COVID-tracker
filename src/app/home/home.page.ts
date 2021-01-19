@@ -22,9 +22,21 @@ export class HomePage implements OnInit {
     this.getCardsCount();
   }
 
+  /**
+ * @description Back to previous page
+ * @param {}
+ */
   goToStateInfo(): void {
     this._router.navigate(['/state-covid-case'])
   }
+
+  /**
+  * @description Get total covid count Information
+  * @param {}
+  * @author Clitan Crasta
+  * @see https://documenter.getpostman.com/view/11238297/SzfDwQdd?version=latest#1a62a888-93c7-4d07-95b3-97ab7a97d1ce
+  * @version v1
+  */
 
   getCardsCount(): void {
     this._service.getCardCounts().subscribe(res => {

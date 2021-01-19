@@ -28,13 +28,28 @@ export class StateCovidCasePage implements OnInit {
     this.getStateDetails();
   }
 
-  showDistrictData(data):void{
+
+
+  showDistrictData(data): void {
     this._router.navigate([`/district-covid-case/${data.id}`])
   }
+
+  /**
+  * @description Back to previous page
+  * @param {}
+  */
 
   goBack(): void {
     this._router.navigate(['/home'])
   }
+
+  /**
+   * @description Get states covid Information
+   * @param {}
+   * @author Clitan Crasta
+   * @see https://documenter.getpostman.com/view/11238297/SzfDwQdd?version=latest#1a62a888-93c7-4d07-95b3-97ab7a97d1ce
+   * @version v1
+   */
 
   getStateDetails(): void {
     this._service.getStateDetails().subscribe(res => {

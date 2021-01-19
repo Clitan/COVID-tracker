@@ -29,6 +29,10 @@ export class DistrictCovidCasePage implements OnInit {
     this.getRouteData();
   }
 
+  /**
+  * @description get route params
+  * @param {}
+  */
 
   getRouteData(): void {
     this._activeRoute.params.subscribe(params => {
@@ -36,9 +40,23 @@ export class DistrictCovidCasePage implements OnInit {
     })
   }
 
+  /**
+   * @description Back to previous page
+   * @param {}
+   */
+
   goBack(): void {
     this._router.navigate(['/state-covid-case'])
   }
+
+  /**
+   * @description Get District covid Information
+   * @param id state ID
+   * @author Clitan Crasta
+   * @see https://documenter.getpostman.com/view/11238297/SzfDwQdd?version=latest#1a62a888-93c7-4d07-95b3-97ab7a97d1ce
+   * @version v1
+   */
+
 
   getDistrictDetails(id: string): void {
     this._service.getStateDetails().subscribe(res => {
