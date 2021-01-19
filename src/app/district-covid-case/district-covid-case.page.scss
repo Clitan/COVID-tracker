@@ -1,0 +1,54 @@
+.state-covid-case {
+    width: 100%;
+    min-height: 100vh;
+    overflow: auto;
+    background-color: #eee;
+
+    @media (min-width:1140px) {
+        padding: 2rem;
+
+        .header {
+            padding: 0;
+        }
+    }
+
+    .header {
+        padding: 1.5rem 1.5rem 1.5rem 0;
+        display: flex;
+        align-items: center;
+        color: black;
+
+        .icon {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    .table-cover {
+        overflow: auto;
+
+        table {
+            width: 100%;
+
+
+            .table-row {
+                &:hover {
+                    background-color: #eee;
+                }
+            }
+
+            th {
+                color: black;
+                font-weight: bold;
+            }
+
+            td,
+            th {
+                border: 1px solid #d3d7dc;
+                border-collapse: collapse;
+                min-width: 150px;
+                padding: 12px;
+            }
+        }
+    }
+}
