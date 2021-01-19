@@ -28,6 +28,9 @@ export class StateCovidCasePage implements OnInit {
     this.getStateDetails();
   }
 
+  showDistrictData(data):void{
+    this._router.navigate([`/district-covid-case/${data.id}`])
+  }
 
   goBack(): void {
     this._router.navigate(['/home'])
